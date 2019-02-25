@@ -1,6 +1,28 @@
 import React, { Component } from 'react';
 
 class StopWatch extends Component {
+  state = {
+    timeNow: {},
+    splitTimes: []
+  }
+
+  handleStartClick = (startTime) =>{
+    this.setState({
+      timeNow: 0
+    })
+  }
+
+  handleStopClick = (stopTime) => {
+
+  }
+
+  handleSplitClick = (timeNow) => {
+    this.setState({
+      splitTimes: [...this.state.splitTimes, timeNow]
+    })
+  }
+
+
   render(){
     return(
       <div>
